@@ -16,3 +16,5 @@ git switch -c "apz/$(cat /dev/urandom | LC_ALL=C tr -dc 'a-z0-9' | head -c 8)"
 ```
 
 Squash all commits up to merge base into a single commit, then push and create PR using gh command. Use gh stack for stacked PRs.
+
+After the PR is published on GitHub, do not amend or squash commits. Make any later changes with regular commits.
