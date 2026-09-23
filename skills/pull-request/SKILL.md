@@ -3,14 +3,16 @@ name: pull-request
 description: Create a Pull Request
 ---
 
-Do a very quick code review and run lints and typecheck before, stop if failed.
+if current branch is main, consider a new PR, else consider a new stacked PR on top of current branch.
 
-If the current branch is linked to a PR, and there are dirty changes, then create a new stacked PR using gh cli 
-Create a new branch using the following command if not already on a branch:
+If there are uncommitted changes, use the $commit skill.
+
+Use the $code-review skill, run lints and typecheckers, stop if failed.
+
+Use the following command to create a new branch:
 
 ```bash
 git switch -c "apz/$(cat /dev/urandom | LC_ALL=C tr -dc 'a-z0-9' | head -c 8)"
 ```
 
-Create a single commit using $commit if not already.
-Else, squash all commits into one single commit before pushing.
+Squash all commits up to merge base into a single commit, then push and create PR using gh command. Use gh stack for stacked PRs.
