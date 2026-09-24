@@ -12,7 +12,7 @@ Use the $code-review skill, run lints and typecheckers, stop immediately if fail
 Use the following command to create a new branch:
 
 ```bash
-git switch -c "apz/$(cat /dev/urandom | LC_ALL=C tr -dc 'a-z0-9' | head -c 5)"
+git switch -c "apz/$(openssl rand -hex 3)"
 ```
 
 Squash all commits up to merge base into a single commit, then push and create PR using gh command. Use gh stack for stacked PRs.
