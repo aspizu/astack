@@ -8,13 +8,13 @@ Don't tell me what is good or passes, tell me what is bad or has failed.
 write findings in chat, not as review comments.
 number findings.
 Don't recommend solutions.
-keep finding issues until you find atleast one.
+keep finding issues until you find at least one.
 Sort findings by difficulty to fix. Mark easiest to fix findings with (Easy)
 In addition to bugs, report misleading naming, code placed at the wrong level of abstraction, code that could be inlined but wasn't, unnecessary code comments, hacks trying to be too smart, redundant checks and redundant code.
 
 Response Format:
 
-### (1) A switch can run the wrong case [Easy]
+### [1] A switch can run the wrong case (Easy)
 
 [src/visitor/switchcase.rs:49](/path/to/file.rs:49)
 
