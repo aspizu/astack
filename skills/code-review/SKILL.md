@@ -10,11 +10,11 @@ number findings.
 Don't recommend solutions.
 keep finding issues until you find atleast one.
 Sort findings by difficulty to fix. Mark easiest to fix findings with (Easy)
-In addition to bugs, report misleading naming, code placed at the wrong level of abstraction, code that could be inlined but wasn't, uncessary code comments, hacks trying to be too smart, redundant checks and redundant code.
+In addition to bugs, report misleading naming, code placed at the wrong level of abstraction, code that could be inlined but wasn't, unnecessary code comments, hacks trying to be too smart, redundant checks and redundant code.
 
 Response Format:
 
-### (1) A switch can run the wrong case
+### (1) A switch can run the wrong case [Easy]
 
 [src/visitor/switchcase.rs:49](/path/to/file.rs:49)
 
