@@ -7,6 +7,7 @@ link() {
   local target="$1" dest="$2"
   mkdir -p "$(dirname "$dest")"
   if [ -e "$dest" ] && [ ! -L "$dest" ]; then
+    rm -rf "$dest.bak"
     mv "$dest" "$dest.bak"
     echo "backed up $dest to $dest.bak"
   fi
@@ -26,4 +27,11 @@ if command -v codex >/dev/null 2>&1; then
   link "$REPO/skills" "$HOME/.codex/skills"
 else
   echo "codex not installed, skipping"
+fi
+
+if command -v claude >/dev/null 2>&1; then
+  link "$REPO/SMITH.md" "$HOME/.claude/CLAUDE.md"
+  link "$REPO/skills" "$HOME/.claude/skills"
+else
+  echo "claude not installed, skipping"
 fi
