@@ -3,6 +3,7 @@ name: code-review
 description: Review code.
 ---
 
+If you implemented the changes being reviewed, do not review your own output. Launch a sub-agent to perform the review instead.
 consider staged + unstaged diff unless specified otherwise. default to considering the current branch compared to merge base if no uncommitted changes.
 Don't tell me what is good or passes, tell me what is bad or has failed.
 write findings in chat, not as review comments.

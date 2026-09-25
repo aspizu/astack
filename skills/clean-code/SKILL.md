@@ -3,6 +3,7 @@ name: clean-code
 description: Audit code cleanliness. Use when asked to check code quality, cleanliness, tidiness, or hygiene on files or a directory, as opposed to reviewing a diff for bugs.
 ---
 
+If you implemented the changes being audited, do not audit your own output. Launch a sub-agent to perform the audit instead.
 consider staged + unstaged diff unless specified otherwise. default to considering the current branch compared to merge base if no uncommitted changes.
 Don't tell me what is good, tell me what is bad. write findings in chat, not as review comments. number findings.
 
