@@ -10,9 +10,11 @@ number findings.
 Don't recommend solutions.
 keep finding issues until you find at least one.
 Sort findings by difficulty to fix. Mark easiest to fix findings with (Easy)
-In addition to bugs, report misleading naming, code placed at the wrong level of abstraction, code that could be inlined but wasn't, unnecessary code comments, hacks trying to be too smart, redundant checks and redundant code.
+After reporting the review findings, invoke the clean-code skill on the files covered by the diff.
 
 Response Format:
+
+## Problems
 
 ### [1] A switch can run the wrong case (Easy)
 
