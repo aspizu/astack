@@ -19,4 +19,4 @@ Squash all commits up to merge base into a single commit, then push and create P
 
 After the PR is published on GitHub, do not amend or squash commits. Make any later changes with regular commits, update PR title when scope changes.
 
-PR description should be empty unless specified otherwise.
+If the diff includes UI changes, capture screenshots of the affected screens (use the browser preview or a simulator) and attach them to the PR description. Otherwise leave the PR description empty unless specified otherwise.
