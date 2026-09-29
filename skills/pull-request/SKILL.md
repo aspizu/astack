@@ -3,20 +3,11 @@ name: pull-request
 description: Create a Pull Request
 ---
 
-if current branch is main, consider a new PR, else consider a new stacked PR on top of current branch.
+Use the $code-review skill, run lints, checks, ... Stop immediately if failed.
 
-If there are uncommitted changes, use the $commit skill.
+After the PR is published on GitHub, when making changes, update PR title/desc if scope changed.
 
-Use the $code-review skill, run lints and typecheckers, stop immediately if failed.
+For UI changes, capture screenshots of the affected screens (use the browser preview or a simulator) and attach them to the PR description.
+Make sure the screenshots are not low resolution.
 
-Use the following command to create a new branch:
-
-```bash
-git switch -c "apz/$(openssl rand -hex 3)"
-```
-
-Squash all commits up to merge base into a single commit, then push and create PR using gh command. Use gh stack for stacked PRs.
-
-After the PR is published on GitHub, do not amend or squash commits. Make any later changes with regular commits, update PR title when scope changes.
-
-If the diff includes UI changes, capture screenshots of the affected screens (use the browser preview or a simulator) and attach them to the PR description. Otherwise leave the PR description empty unless specified otherwise.
+PR descriptions should a very short paragraph.
