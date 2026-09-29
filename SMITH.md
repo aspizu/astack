@@ -19,6 +19,6 @@ Never use the question tool call.
 
 # Conventions
 
-Branch names should be prefixed with `apz/`
+Branch names should be prefixed with `apz/` and should be short.
 
 Commit messages should have a simple subject with no body, don't follow conventional commits.
