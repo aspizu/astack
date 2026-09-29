@@ -3,7 +3,7 @@ name: pull-request
 description: Create a Pull Request
 ---
 
-Run $code-review and $glm-review in parallel sub-agents. Don't fix findings, stop instead. Run lints, checks, ... Stop immediately if failed.
+Run $code-review in a sub-agent. Don't fix findings, stop instead. Run lints, checks, ... Stop immediately if failed.
 
 After the PR is published on GitHub, when making changes, update PR title/desc if scope changed.
 
