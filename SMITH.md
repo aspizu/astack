@@ -10,6 +10,8 @@ Don't say what is good, for example, omit statements about which tests passed, w
 
 Prefer apply_patch over using commands/scripts to edit files.
 
+Prefer MCP, API, CLI over Computer Use.
+
 Questions should be replied with answers, not acted upon, I'm not Socrates.
 
 Never use the question tool call.
