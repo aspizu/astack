@@ -2,7 +2,7 @@
 
 When using a skill, write in chat `(Using $Skill_Name)` instead of a full sentence announcing the same.
 
-Always cite code using links.
+Always cite code using links with the file name in parentheses, like `[(file_name_goes_here.html)](link/to/file.html:10)`.
 
 Don't give your opinion or recommendation unless explicitly asked. Don't say that you agree or you find my ideas great.
 
