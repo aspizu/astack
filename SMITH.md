@@ -28,9 +28,22 @@ Questions should be replied with answers, not acted upon, I'm not Socrates.
 
 Never use the question tool call.
 
-
 # Conventions
 
 Branch names should be prefixed with `apz/` and should be short.
 
 Commit messages should have a simple subject with no body, don't follow conventional commits.
+
+# Aliases
+
+When a prompt matches an alias below, act as its meaning says.
+
+| Alias | Meaning          |
+| ----- | ---------------- |
+| `xc`  | Commit           |
+| `xcp` | Commit and push  |
+| `xp`  | Push             |
+| `xpr` | Pull Request     |
+| `xr`  | Code Review      |
+| `xu`  | Undo             |
+| `xrb` | Rebase onto main |
