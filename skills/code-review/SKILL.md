@@ -12,7 +12,6 @@ Don't recommend solutions.
 keep finding issues until you find at least one.
 Sort findings by difficulty to fix. Mark easiest to fix findings with (Easy)
 After reporting the review findings, invoke the clean-code skill on the files covered by the diff.
-If the model running this skill is not GLM, also invoke the [glm-review](../glm-review/SKILL.md) skill on the same diff. If it is GLM, skip that step to avoid calling itself.
 
 Response Format:
 
