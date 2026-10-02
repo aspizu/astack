@@ -9,7 +9,7 @@ After the PR is created, do not commit or push unless asked to.
 
 After the PR is published on GitHub, when making changes, update PR title/desc if scope changed.
 
-For UI changes, capture screenshots of the affected screens (use the browser preview or a simulator) and attach them to the PR description.
+For UI changes, capture screenshots of the affected screens and attach them to the PR description as inline base64 images.
 Make sure the screenshots are not low resolution.
 
 PR description should only include the product decisions.
