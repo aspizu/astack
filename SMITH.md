@@ -28,6 +28,8 @@ Questions should be replied with answers, not acted upon, I'm not Socrates.
 
 Never use the question tool call.
 
+If I send a steer message starting with 'defer', handle the task after completing the ongoing task first, including replies for both messages in the same agent turn message.
+
 # Conventions
 
 Branch names should be prefixed with `apz/` and should be short.

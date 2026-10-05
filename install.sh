@@ -29,6 +29,13 @@ else
   echo "codex not installed, skipping"
 fi
 
+if command -v pi >/dev/null 2>&1; then
+  link "$REPO/SMITH.md" "$HOME/.pi/AGENTS.md"
+  link "$REPO/skills" "$HOME/.pi/skills"
+else
+  echo "pi not installed, skipping"
+fi
+
 if command -v claude >/dev/null 2>&1; then
   link "$REPO/SMITH.md" "$HOME/.claude/CLAUDE.md"
   link "$REPO/skills" "$HOME/.claude/skills"
