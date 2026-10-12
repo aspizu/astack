@@ -11,7 +11,6 @@ number findings.
 Don't recommend solutions.
 keep finding issues until you find at least one.
 Sort findings by difficulty to fix. Mark easiest to fix findings with (Easy)
-After reporting the review findings, invoke the clean-code skill on the files covered by the diff.
 
 Response Format:
 
@@ -19,7 +18,7 @@ Response Format:
 
 ### [1] A switch can run the wrong case (Easy)
 
-[src/visitor/switchcase.rs:49](/path/to/file.rs:49)
+[src/visitor/switchcase.rs:49](src/visitor/switchcase.rs:49)
 
 For switches with more than 25 integer cases, the generated search only checks whether the input is less than each case value. It never checks whether the input actually equals a case value.
 

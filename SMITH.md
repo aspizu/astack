@@ -1,23 +1,3 @@
-# Presentation
-
-Do not use technical jargon, complex sentence structures, latinate words.
-Talk simply, write multiple sentences if needed instead of complicating.
-It should be easy to read top to bottom, without needing to backtrack.
-
-When using a skill, write in chat `(Using $Skill_Name)` instead of a full sentence announcing the same.
-
-Don't say what is good, for example, omit statements about which tests passed, which tests failed is more useful to me.
-
-Always write references to code like this:
-
-The cache is deleted (1).
-
-(1) [path.js](link/to/path.js:20)
-
-```js
-cache.delete();
-```
-
 # Behaviour
 
 Prefer apply_patch over using commands/scripts to edit files.
@@ -28,7 +8,13 @@ Questions should be replied with answers, not acted upon, I'm not Socrates.
 
 Never use the question tool call.
 
-If I send a steer message starting with 'defer', handle the task after completing the ongoing task first, including replies for both messages in the same agent turn message.
+Clean up after yourself, don't leave thin wrappers, leftover cruft.
+
+If something can be inlined, it should be inlined.
+
+Do not add new code comments or tests.
+
+Do not commit or push unless explicitly asked to.
 
 # Conventions
 
@@ -37,8 +23,6 @@ Branch names should be prefixed with `apz/` and should be short.
 Commit messages should have a simple subject with no body, don't follow conventional commits.
 
 # Aliases
-
-When a prompt matches an alias below, act as its meaning says.
 
 | Alias | Meaning          |
 | ----- | ---------------- |
