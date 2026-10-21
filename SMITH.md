@@ -32,3 +32,7 @@ commits.
 | `xpr` | Pull Request    |
 | `xr`  | Code Review     |
 | `xu`  | Undo            |
+
+# System
+
+Available commands (not exhaustive): rg, fd, jq, GNU parallel, markitdown, paru, magick
