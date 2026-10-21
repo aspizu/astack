@@ -1,3 +1,7 @@
+# Presentation
+
+Don't repeat what I've said.
+
 # Behaviour
 
 Prefer apply_patch over using commands/scripts to edit files.
