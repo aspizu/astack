@@ -20,14 +20,15 @@ Do not commit or push unless explicitly asked to.
 
 Branch names should be prefixed with `apz/` and should be short.
 
-Commit messages should have a simple subject with no body, don't follow conventional commits.
+Commit messages should have a simple subject with no body, don't follow conventional
+commits.
 
 # Aliases
 
-| Alias | Meaning          |
-| ----- | ---------------- |
-| `xc`  | Commit           |
-| `xcp` | Commit and push  |
-| `xpr` | Pull Request     |
-| `xr`  | Code Review      |
-| `xu`  | Undo             |
+| Alias | Meaning         |
+| ----- | --------------- |
+| `xc`  | Commit          |
+| `xcp` | Commit and push |
+| `xpr` | Pull Request    |
+| `xr`  | Code Review     |
+| `xu`  | Undo            |

@@ -1,6 +1,8 @@
 ---
 name: markitdown
-description: Read web pages on the internet, or convert files (PDF, DOCX, PPTX, XLSX, HTML, EPUB) to Markdown.
+description:
+  Read web pages on the internet, or convert files (PDF, DOCX, PPTX, XLSX, HTML, EPUB)
+  to Markdown.
 ---
 
 # MarkItDown
@@ -9,14 +11,16 @@ Use `/home/aspizu/.local/bin/markitdown` explicitly; it may not be on `PATH`.
 
 ## Read websites
 
-Pass a quoted URL to fetch and convert a webpage or downloadable file. Output goes to stdout unless `-o` is specified:
+Pass a quoted URL to fetch and convert a webpage or downloadable file. Output goes to
+stdout unless `-o` is specified:
 
 ```bash
 /home/aspizu/.local/bin/markitdown 'https://example.com/article'
 /home/aspizu/.local/bin/markitdown 'https://example.com/report.pdf' -o 'report.md'
 ```
 
-This does not execute JavaScript or crawl sites. JavaScript-only or login-protected pages may yield incomplete content.
+This does not execute JavaScript or crawl sites. JavaScript-only or login-protected
+pages may yield incomplete content.
 
 ## Convert files
 
