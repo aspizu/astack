@@ -30,8 +30,8 @@ else
 fi
 
 if command -v pi >/dev/null 2>&1; then
-  link "$REPO/SMITH.md" "$HOME/.pi/AGENTS.md"
-  link "$REPO/skills" "$HOME/.pi/skills"
+  link "$REPO/SMITH.md" "$HOME/.pi/agent/AGENTS.md"
+  link "$REPO/skills" "$HOME/.pi/agent/skills"
 else
   echo "pi not installed, skipping"
 fi
