@@ -6,8 +6,8 @@ description: Search Twitter/X posts and read posts, threads, or replies using tw
 Use the existing authenticated account `aspizu_`:
 
 ```bash
-TWS_RAISE_WHEN_NO_ACCOUNT=true /home/aspizu/.local/bin/twscrape \
-  --db /home/aspizu/.config/twscrape/accounts.db \
+TWS_RAISE_WHEN_NO_ACCOUNT=true twscrape \
+  --db ~/.config/twscrape/accounts.db \
   search 'QUERY' --limit=10
 ```
 

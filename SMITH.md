@@ -39,4 +39,4 @@ commits.
 
 # System
 
-Available commands (not exhaustive): rg, fd, jq, GNU parallel, markitdown, paru, magick
+Available commands (not exhaustive): rg, fd, jq, GNU parallel, markitdown, paru, magick, ntn (notion)

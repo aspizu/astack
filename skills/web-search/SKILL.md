@@ -7,15 +7,11 @@ description: Perform a web search
 
 `POST https://api.exa.ai/search` Header: `x-api-key: $EXA_API_KEY`
 
-Before every API request, run `source "$HOME/.env"` in the same shell command as the
-request. This file exports `EXA_API_KEY`. Do not print or log the key.
-
 If you already have URLs and only need page content, use `POST /contents` instead.
 
 ## Example
 
 ```bash
-source "$HOME/.env" &&
 curl -sS -X POST "https://api.exa.ai/search" \
   -H "Content-Type: application/json" \
   -H "x-api-key: $EXA_API_KEY" \
