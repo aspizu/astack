@@ -35,3 +35,6 @@ markitdown -x .pdf < 'input.pdf' > 'output.md'
 Other supported formats use the same syntax; adjust the extension hint accordingly.
 
 For all options, run `markitdown --help`.
+
+If markitdown fails to read the contents of a web page, you may use the chrome-mcp skill
+to open the web page in my browser and read it.
