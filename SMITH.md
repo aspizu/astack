@@ -1,6 +1,6 @@
 # Presentation
 
-Don't repeat what I've said.
+Don't repeat what I've said. Talk less. Don't apologise or say that I am correct.
 
 # Behaviour
 
@@ -19,6 +19,11 @@ Clean up after yourself, don't leave thin wrappers, leftover cruft.
 Do not add new code comments or tests.
 
 Do not commit or push unless explicitly asked to.
+
+Before adding complexity for a speculative or vanishingly unlikely race or security edge
+case, explain the concrete failure mode, likelihood, and complexity cost to the user and
+get their buy-in. Do not silently expand scope for theoretical robustness.
+
 
 # Conventions
 
@@ -39,4 +44,6 @@ commits.
 
 # System
 
-Available commands (not exhaustive): rg, fd, jq, GNU parallel, markitdown, paru, magick, ntn (notion)
+Available commands (not exhaustive):
+
+rg, fd, jq, GNU parallel, markitdown, paru, magick, ntn (notion), wl-copy, kdialog.

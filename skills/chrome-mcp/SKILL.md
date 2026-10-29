@@ -1,6 +1,6 @@
 ---
 name: chrome-mcp
-description: Control the user's running Helium browser through chrome-devtools-mcp using mcp2cli. Use for browser interaction, screenshots, network inspection, and browser debugging.
+description: Control the user's running Helium browser through chrome-devtools-mcp using mcp2cli. Use for browser interaction, screenshots, network inspection, and browser debugging. (Prefer native chrome MCP tool calls over this if available)
 ---
 
 # Helium through mcp2cli

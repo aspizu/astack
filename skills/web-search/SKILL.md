@@ -1,6 +1,6 @@
 ---
 name: web-search
-description: Perform a web search
+description: Perform a web search (Prefer web__run over this if available)
 ---
 
 # Exa Search

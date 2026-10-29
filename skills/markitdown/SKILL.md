@@ -2,7 +2,7 @@
 name: markitdown
 description:
   Read web pages on the internet, or convert files (PDF, DOCX, PPTX, XLSX, HTML, EPUB)
-  to Markdown.
+  to Markdown. (Prefer web__run over this if available)
 ---
 
 # MarkItDown
