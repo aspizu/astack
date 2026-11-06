@@ -1,6 +1,6 @@
 ---
-name: android-use
-description: Control an Android device using ADB.
+name: mobile-use
+description: Control my mobile phone using adb.
 ---
 
 The Pixel's Tailscale ADB address is `$ANDROID_ADB_ADDRESS`. If TCP mode needs
@@ -21,4 +21,5 @@ fi
 set +e
 ```
 
-UPI Lite is available for payments; confirm with the user before paying.
+UPI Lite is available for payments; ask the user for explicit confirmation before hitting
+pay.

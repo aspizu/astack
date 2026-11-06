@@ -46,5 +46,10 @@
         "https://spec.openapis.org/": true,
         "https://www.schemastore.org/": true
     },
-    "git.enableSmartCommit": true
+    "git.enableSmartCommit": true,
+    "editor.fontSize": 14,
+    "catppuccin.italicKeywords": false,
+    "catppuccin.italicComments": false,
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "diffEditor.renderSideBySide": false
 }
