@@ -30,6 +30,27 @@ zstyle ':completion:*' menu select
 
 # --- Prompt ------------------------------------------------------------------
 
+autoload -Uz add-zsh-hook
+function set_terminal_title() {
+  [[ $TERM == dumb ]] && return
+  local path=${(%):-%~} title='' part
+  local -a parts
+  parts=(${(s:/:)path})
+  [[ $path == /* ]] && title=/
+  for part in ${parts[1,-2]}; do
+    if [[ $part == '~' ]]; then
+      title+='~/'
+    elif [[ $part == .* ]]; then
+      title+="${part[1,2]}/"
+    else
+      title+="${part[1]}/"
+    fi
+  done
+  title+=${parts[-1]}
+  printf '\e]0;%s\a' "$title"
+}
+add-zsh-hook precmd set_terminal_title
+
 eval "$(starship init zsh)"
 
 # --- Plugins -----------------------------------------------------------------
