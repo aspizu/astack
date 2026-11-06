@@ -1,6 +1,6 @@
 ---
 name: reddit-search
-description: Search or view posts and discussion on Reddit. (Prefer web__run over this if available)
+description: Search or view posts and discussion on Reddit. (Also use web__run in addition if available)
 ---
 
 # Search posts
