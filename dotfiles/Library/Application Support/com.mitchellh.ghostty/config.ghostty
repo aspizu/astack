@@ -52,6 +52,7 @@
 # resize-overlay-duration = 4s 200ms
 
 font-family = ComicShannsMono Nerd Font Mono
+font-size = 14
 
 # Session
 command = /opt/homebrew/bin/zellij attach --create main
