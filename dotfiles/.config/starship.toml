@@ -1,0 +1,48 @@
+# Fish's default prompt: user@host ~/s/shortened/path (branch)[status]>
+"$schema" = 'https://starship.rs/config-schema.json'
+add_newline = false
+format = '$username@$hostname $directory$git_branch$git_commit$status$character'
+right_format = ''
+
+[username]
+show_always = true
+style_user = 'bright-green'
+style_root = 'bright-green'
+format = '[$user]($style)'
+
+[hostname]
+ssh_only = false
+ssh_symbol = ''
+trim_at = '.'
+style = ''
+format = '[$hostname]($style)'
+
+[directory]
+style = 'green'
+format = '[$path]($style)'
+truncation_length = 1
+truncate_to_repo = false
+fish_style_pwd_dir_length = 1
+home_symbol = '~'
+
+[git_branch]
+format = ' \($branch\)'
+only_attached = true
+
+[git_commit]
+format = ' \($hash\)'
+
+[status]
+disabled = false
+style = 'bold red'
+format = '[\[$status\]]($style)'
+pipestatus = true
+pipestatus_format = '[\[$pipestatus\]]($style)'
+pipestatus_segment_format = '$status'
+pipestatus_separator = '|'
+
+[character]
+success_symbol = '>'
+error_symbol = '>'
+vimcmd_symbol = '>'
+format = '$symbol '

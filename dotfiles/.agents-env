@@ -1,0 +1,38 @@
+#!/bin/bash
+# --- Helpers -----------------------------------------------------------------
+
+path_prepend() {
+    local paths=":${PATH-}:"
+    paths="${paths//:$1:/:}"
+    paths="${paths#:}"
+    paths="${paths%:}"
+    export PATH="$1${paths:+:$paths}"
+}
+
+path_append() {
+    case ":${PATH-}:" in
+        *:"$1":*) return ;;
+    esac
+    export PATH="${PATH:+$PATH:}$1"
+}
+
+# --- Tools -------------------------------------------------------------------
+
+[ ! -f "$HOME/.agents-secrets" ] || . "$HOME/.agents-secrets"
+
+export PNPM_HOME="$HOME/Library/pnpm"
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export ANDROID_SDK_ROOT="$ANDROID_HOME"
+
+# --- Path --------------------------------------------------------------------
+
+path_prepend "/opt/local/sbin"
+path_prepend "/opt/local/bin"
+path_prepend "$HOME/.cargo/bin"
+path_prepend "$HOME/.local/bin"
+path_prepend "$ANDROID_HOME/platform-tools"
+path_append "$PNPM_HOME/bin"
+path_append "/opt/homebrew/bin"
+path_append "/usr/local/bin"
+
+unset -f path_prepend path_append

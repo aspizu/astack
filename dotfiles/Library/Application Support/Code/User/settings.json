@@ -1,0 +1,48 @@
+{
+    "editor.fontFamily": "'Comic Mono', monospace",
+    "workbench.startupEditor": "none",
+    "chat.disableAIFeatures": true,
+    "telemetry.telemetryLevel": "off",
+    "telemetry.feedback.enabled": false,
+    "workbench.enableExperiments": false,
+    "workbench.tips.enabled": false,
+    "extensions.ignoreRecommendations": true,
+    "workbench.welcomePage.walkthroughs.openOnInstall": false,
+    "update.showReleaseNotes": false,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "editor.inlineSuggest.enabled": false,
+    "workbench.activityBar.compact": true,
+    "workbench.sideBar.location": "right",
+    "terminal.integrated.shellIntegration.enabled": false,
+    "security.workspace.trust.enabled": false,
+    "editor.scrollbar.verticalScrollbarSize": 8,
+    "editor.scrollbar.horizontalScrollbarSize": 8,
+    "editor.scrollbar.vertical": "auto",
+    "editor.scrollbar.horizontal": "auto",
+    "editor.minimap.autohide": "mouseover",
+    "editor.formatOnSave": true,
+    "js/ts.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+    "files.insertFinalNewline": true,
+    "editor.rulers": [
+        88
+    ],
+    "workbench.iconTheme": "catppuccin-mocha",
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "explorer.confirmDelete": false,
+    "files.associations": {
+        "*.css": "tailwindcss"
+    },
+    "[mdx]": {
+        "editor.defaultFormatter": "oxc.oxc-vscode"
+    },
+    "git.confirmSync": false,
+    "json.schemaDownload.trustedDomains": {
+        "https://developer.microsoft.com/json-schemas/": true,
+        "https://json-schema.org/": true,
+        "https://json.schemastore.org/": true,
+        "https://raw.githubusercontent.com": true,
+        "https://schemastore.azurewebsites.net/": true,
+        "https://spec.openapis.org/": true,
+        "https://www.schemastore.org/": true
+    }
+}
