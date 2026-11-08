@@ -26,3 +26,5 @@ curl -fsSL --max-time 30 -A 'post-reader/1.0' \
 ```
 
 Back off before retrying; avoid rapid or parallel requests.
+
+If curl can't read a page fully, try browser-use.

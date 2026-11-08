@@ -2,7 +2,7 @@
 name: markitdown
 description:
   Read web pages on the internet, or convert files (PDF, DOCX, PPTX, XLSX, HTML, EPUB)
-  to Markdown. (Fallback to web__run if this fails to read a web page)
+  to Markdown. Fall back to browser-use if this fails to read a web page.
 ---
 
 # MarkItDown
@@ -36,5 +36,4 @@ Other supported formats use the same syntax; adjust the extension hint according
 
 For all options, run `markitdown --help`.
 
-If markitdown fails to read the contents of a web page, you may use the chrome-mcp skill
-to open the web page in my browser and read it.
+If MarkItDown can't read a page fully, try browser-use.

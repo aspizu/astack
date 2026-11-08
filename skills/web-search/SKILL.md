@@ -9,6 +9,8 @@ description: Perform a web search (Also use web__run in addition if available)
 
 If you already have URLs and only need page content, use `POST /contents` instead.
 
+If Exa can't read a page fully, try markitdown.
+
 ## Example
 
 ```bash

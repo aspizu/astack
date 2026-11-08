@@ -15,3 +15,5 @@ Always use this database. The environment variable prevents indefinite waits for
 unavailable accounts. Output is JSON Lines; `--limit` may return more results than
 requested.
 
+If twscrape can't read a page fully, try browser-use.
+
