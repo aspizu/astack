@@ -5,55 +5,72 @@ import shutil
 import subprocess
 import sys
 import time
+from typing import TextIO
 
 
-def output(message, color, stream=sys.stdout):
+def output(message: str, color: str, stream: TextIO = sys.stdout) -> None:
     if stream.isatty() and "NO_COLOR" not in os.environ:
         message = f"\033[{color}m{message}\033[0m"
     print(message, file=stream, flush=True)
 
 
-def status(message, color="36"):
+def status(message: str, color: str = "36") -> None:
     output(f"  {message}", color)
 
 
-def error(message):
+def error(message: str) -> None:
     output(message, "31", sys.stderr)
 
 
-def main():
+def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Control my Android phone from this Mac."
     )
     subparsers = parser.add_subparsers(dest="action", required=True)
-    subparsers.add_parser("mirror", help="Unlock and open screen mirroring")
+    mirror = subparsers.add_parser("mirror", help="Unlock and open screen mirroring")
+    mirror.add_argument(
+        "--quality",
+        choices=("low", "medium", "high"),
+        default="medium",
+        help="Video quality (default: medium)",
+    )
     subparsers.add_parser("unlock", help="Wake and unlock the phone")
     subparsers.add_parser("lock", help="Turn off the phone screen")
-    args = parser.parse_args()
+    return parser.parse_args()
 
-    for program in ("adb", "scrcpy") if args.action == "mirror" else ("adb",):
+
+def check_dependencies(action: str) -> None:
+    for program in ("adb", "scrcpy") if action == "mirror" else ("adb",):
         if not shutil.which(program):
-            error(f"{program} is missing. Install it with: brew install scrcpy")
+            error(f"{program} is missing.")
             sys.exit(1)
 
+
+def get_phone_address() -> str:
     address = os.environ.get("ANDROID_ADB_ADDRESS")
     if not address:
-        error("Set ANDROID_ADB_ADDRESS to your phone's ADB address.")
+        error("ANDROID_ADB_ADDRESS is missing.")
         sys.exit(1)
+    return address
 
-    adb = ["adb", "-s", address]
+
+def connect_phone(address: str) -> None:
     status("Connecting to your phone...")
     subprocess.run(["adb", "connect", address], check=True)
-    subprocess.run(adb + ["wait-for-device"], check=True)
+    subprocess.run(["adb", "-s", address, "wait-for-device"], check=True)
 
-    if args.action == "lock":
-        status("Turning off the screen...")
-        subprocess.run(
-            adb + ["shell", "input", "keyevent", "KEYCODE_SLEEP"], check=True
-        )
-        status("Screen turned off.", "32")
-        return
 
+def lock_phone(address: str) -> None:
+    status("Turning off the screen...")
+    subprocess.run(
+        ["adb", "-s", address, "shell", "input", "keyevent", "KEYCODE_SLEEP"],
+        check=True,
+    )
+    status("Screen turned off.", "32")
+
+
+def unlock_phone(address: str) -> None:
+    adb = ["adb", "-s", address]
     status("Waking the screen...")
     subprocess.run(adb + ["shell", "input", "keyevent", "KEYCODE_WAKEUP"], check=True)
     time.sleep(1.5)
@@ -66,7 +83,7 @@ def main():
     if "showing=true" in policy:
         pin = os.environ.get("ANDROID_PIN")
         if not pin or not pin.isascii() or not pin.isdigit():
-            error("Set ANDROID_PIN to your phone's numeric PIN.")
+            error("ANDROID_PIN is missing or is not a numeric PIN.")
             sys.exit(1)
         status("Unlocking your phone...")
         subprocess.run(
@@ -81,20 +98,40 @@ def main():
     else:
         status("Phone is already unlocked.", "32")
 
-    if args.action == "mirror":
-        status("Opening scrcpy. The screen will turn off when you close it.", "32")
-        os.execvp(
+
+def mirror_phone(address: str, quality: str) -> None:
+    quality_options = {
+        "low": ["--max-size=640", "--video-bit-rate=500K", "--max-fps=30"],
+        "medium": ["--max-size=960", "--video-bit-rate=800K", "--max-fps=40"],
+        "high": ["--max-size=1600", "--video-bit-rate=2M", "--max-fps=60"],
+    }
+    status("Opening scrcpy. The screen will turn off when you close it.", "32")
+    os.execvp(
+        "scrcpy",
+        [
             "scrcpy",
-            [
-                "scrcpy",
-                "--serial",
-                address,
-                "--max-size=640",
-                "--video-bit-rate=1M",
-                "--max-fps=15",
-                "--power-off-on-close",
-            ],
-        )
+            "--serial",
+            address,
+            "--video-codec=h265",
+            *quality_options[quality],
+            "--power-off-on-close",
+        ],
+    )
+
+
+def main() -> None:
+    args = parse_args()
+    check_dependencies(args.action)
+    address = get_phone_address()
+    connect_phone(address)
+
+    if args.action == "lock":
+        lock_phone(address)
+        return
+
+    unlock_phone(address)
+    if args.action == "mirror":
+        mirror_phone(address, args.quality)
 
 
 if __name__ == "__main__":
