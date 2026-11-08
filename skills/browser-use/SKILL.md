@@ -1,6 +1,10 @@
 ---
 name: browser-use
-description: Use my web browser.
+description: Use a web browser.
 ---
 
-Prefer using chrome mcp over computer use to control helium.
+Only use my Helium browser for a web browser via Chrome MCP.
+
+Prefer Chrome MCP over Computer Use to control Helium.
+
+Don't use the built-in integrated browser.
