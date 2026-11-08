@@ -53,6 +53,7 @@
 
 font-family = ComicShannsMono Nerd Font Mono
 font-size = 14
+keybind = alt+arrow_right=esc:f
 
 # Session
 command = /opt/homebrew/bin/zellij attach --create main
