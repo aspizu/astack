@@ -23,7 +23,7 @@ setopt EXTENDED_HISTORY HIST_IGNORE_DUPS INC_APPEND_HISTORY
 
 # --- Completion --------------------------------------------------------------
 
-fpath=("/opt/homebrew/share/zsh-completions" "/opt/homebrew/share/zsh/site-functions" $fpath)
+fpath=("$HOME/.docker/completions" "/opt/homebrew/share/zsh-completions" "/opt/homebrew/share/zsh/site-functions" $fpath)
 autoload -Uz compinit
 compinit
 zstyle ':completion:*' menu select
