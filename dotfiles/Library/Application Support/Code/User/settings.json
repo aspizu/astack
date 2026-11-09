@@ -1,6 +1,6 @@
 {
-  "editor.fontFamily": "'ComicShannsMono Nerd Font Mono', monospace",
-  "terminal.integrated.fontFamily": "'ComicShannsMono Nerd Font Mono', monospace",
+  "editor.fontFamily": "'CaskaydiaCove Nerd Font Mono', monospace",
+  "terminal.integrated.fontFamily": "'CaskaydiaCove Nerd Font Mono', monospace",
   "workbench.startupEditor": "none",
   "chat.disableAIFeatures": true,
   "telemetry.telemetryLevel": "off",
