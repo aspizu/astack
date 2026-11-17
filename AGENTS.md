@@ -34,4 +34,6 @@ Avoid following conventional commits.
 
 # System
 
-Available commands (not exhaustive): rg, fd, jq, brew, parallel
+CLI Tools:
+
+ast-grep, rg, fd, jq, yq, fzf, gh, parallel, pnpm, oxfmt, oxlint, uv, ruff, ty, oxipng, brew, actionlint, shellcheck, hyperfine
