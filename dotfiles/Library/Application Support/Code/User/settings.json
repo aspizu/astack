@@ -58,6 +58,14 @@
   "[jsonc]": {
     "editor.defaultFormatter": "oxc.oxc-vscode",
   },
+  "json.schemas": [
+    {
+      "fileMatch": ["*.jsonc"],
+      "schema": {
+        "allowTrailingCommas": true,
+      },
+    },
+  ],
   "editor.mouseWheelScrollSensitivity": 0.25,
   "[typescriptreact]": {
     "editor.defaultFormatter": "oxc.oxc-vscode",
@@ -77,4 +85,13 @@
   "window.autoDetectColorScheme": true,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.productIconTheme": "fluent-icons",
+  "terminal.integrated.allowedLinkSchemes": [
+    "file",
+    "http",
+    "https",
+    "mailto",
+    "vscode",
+    "vscode-insiders",
+    "packages/client/src/lib/config.ts",
+  ],
 }
